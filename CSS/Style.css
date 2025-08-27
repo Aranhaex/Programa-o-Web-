@@ -1,0 +1,60 @@
+body{
+    background: greenyellow;
+    margin: 50px 15px 20px 15px;
+}
+h1{
+    color:aqua;
+    text-align: center;
+    font-size: 50px;
+}
+h2{
+    color: tomato;
+    text-align: left;
+    padding: 15px;
+}
+p{
+    color: black;
+    text-align: justify;
+}
+.centro{
+    text-align: center;
+    color: violet;
+}
+.negrito{
+    font-weight: bold;
+}
+.centerimg{
+    text-align: center;
+    padding:auto;
+}
+#especial{
+    color:azure;
+    background: blue;
+    font-size: 15px;
+}
+*{
+   color:red;
+}
+.fundo{
+    height: 400px;
+    background: url(/img/coutinho.avif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.bordas{
+    border-left: 5px ridge cornflowerblue;
+    border-right: 5px ridge cornflowerblue;
+    border-bottom: 5px ridge cornflowerblue;
+    border-top: 5px ridge cornflowerblue;
+    border-radius: 15px;
+}
+.botao{
+    margin-left:45% ;
+    padding: 15px;
+    background: black;
+    border-radius: 5px;
+    
+}
+.botao:hover{
+    background-color: blueviolet;
+}

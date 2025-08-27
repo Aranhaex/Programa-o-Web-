@@ -1,0 +1,123 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Imagem centralizada */
+img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Linha horizontal */
+hr {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Menu - Flexbox para horizontal */
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background-color: #222;
+  padding: 10px 0;
+  border-radius: 6px;
+}
+
+/* Links do menu */
+.menu > li > a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  display: block;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover do menu principal */
+.menu > li > a:hover {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Submenu dropdown - inicialmente oculto */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  list-style: none;
+  border-radius: 0 0 6px 6px;
+  min-width: 140px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  z-index: 10;
+  flex-direction: column;
+}
+
+/* Itens do submenu */
+.submenu li a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover submenu */
+.submenu li a:hover {
+  background-color: #555;
+}
+
+/* Mostrar submenu ao passar mouse no dropdown */
+.dropdown:hover .submenu {
+  display: flex;
+}
+
+/* Indicador da seta */
+.menu > li.dropdown > a::after {
+  content: " ▼";
+  font-size: 0.7em;
+  margin-left: 4px;
+}
+
+/* Responsividade simples */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .submenu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    min-width: auto;
+  }
+}
