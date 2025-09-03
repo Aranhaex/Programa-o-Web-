@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <nav>
+    <ul class="menu">
+      <li><a href="Principal.html">Home</a></li>
+      <li><a href="/BIO/Sobremim.html">Sobre mim</a></li>
+      <li class="dropdown">
+        <a href="#">Serviços</a>
+        <ul class="submenu">
+          <li><a href="#">Musculação</a></li>
+          <li><a href="#">Cardio</a></li>
+          <li><a href="#">Crossfit</a></li>
+          <li><a href="#">Zumba</a></li>
+        </ul>
+      </li>
+      <li><a href="Cadastro.html">Login</a></li>
+    </ul>
+  </nav>
+    <h1>Cadastro</h1>
+    <p>Para fazer o seu cadastro, por favor preencha o formulário abaixo:</p>
+    <form>
+        <label for="nome">Nome Completo:</label><br>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required><br><br>
+        
+        <label for="data_nascimento">Data de Nascimento:</label><br>
+        <input type="date" id="data_nascimento" name="data_nascimento"required><br><br>
+        
+        <label for="cpf">CPF:</label><br>
+        <input type="text" id="cpf" name="cpf" pattern="\d{11}" placeholder="Digite seu CPF" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Digite seu E-mail" required><br><br>
+        
+        <label for="senha">Crie uma senha:</label><br>
+        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required><br><br>
+        
+        <label for="confirmar_senha">Confirme a senha:</label><br>
+        <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Digite novamente sua senha" required><br><br>
+        
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required><br><br>
+        
+        <label for="NomeEmergencia">Nome do Contato de Emergência:</label><br>
+        <input type="text" id="NomeEmergencia" name="NomeEmergencia" placeholder="Digite o nome do contato de emergência"><br><br>
+
+        <label for="emergencia">Numero do Con. de emergência:</label><br>
+        <input type="tel" id="emergencia" name="emergencia" placeholder="Digite o número do contato de emergência" ><br><br>
+
+        <label for="plano">Escolha o Plano:</label><br>
+        <select id="plano" name="plano" required>
+            <option value="mensal">Mensal - R$100,00</option>
+            <option value="trimestral">Trimestral - R$270,00</option>
+            <option value="anual">Anual - R$1000,00</option>
+        </select><br><br>
+        <nav>
+           
+        <input type="submit" value="Cadastrar"><br><br>
+         <a href="Principal.html">Voltar para a página principal</a>
+        </nav>
+    </form>
+    
+</body>
+</html>

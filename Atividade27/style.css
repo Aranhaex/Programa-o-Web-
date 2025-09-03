@@ -1,123 +1,171 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Corpo */
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #f9f9f9;
 }
 
-/* Cabeçalho */
+
 header {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #b00 0%, #222 100%);
+  color: #fff;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 4px #0008;
+}
+
+
+nav {
   margin-bottom: 20px;
 }
 
-/* Imagem centralizada */
-img {
-  display: block;
-  margin: 0 auto 20px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Linha horizontal */
-hr {
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-}
-
-/* Menu - Flexbox para horizontal */
 .menu {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  background-color: #222;
-  padding: 10px 0;
-  border-radius: 6px;
+  gap: 20px;
 }
 
-/* Links do menu */
-.menu > li > a {
-  color: white;
+.menu li {
+  position: relative;
+}
+
+.menu a {
   text-decoration: none;
-  font-weight: bold;
-  padding: 8px 15px;
+  color: #fff;
+  padding: 10px 18px;
   display: block;
-  position: relative;
-  transition: background-color 0.3s ease;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px #0002;
 }
 
-/* Hover do menu principal */
-.menu > li > a:hover {
-  background-color: #444;
-  border-radius: 4px;
+.menu a:hover,
+.menu li.dropdown:hover > a {
+  background: #fff;
+  color: #b00;
 }
 
-/* Dropdown container */
-.dropdown {
-  position: relative;
-}
-
-/* Submenu dropdown - inicialmente oculto */
-.submenu {
+.menu .submenu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: 0;
-  background-color: #333;
-  list-style: none;
-  border-radius: 0 0 6px 6px;
+  background-color: #fff;
+  border: 1px solid #b00;
+  border-radius: 6px;
   min-width: 140px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  z-index: 10;
-  flex-direction: column;
+  z-index: 100;
+  box-shadow: 0 4px 16px #0003;
 }
 
-/* Itens do submenu */
-.submenu li a {
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
+.menu .submenu li a {
+  color: #b00;
+  padding: 10px 16px;
+  border-radius: 0;
+  font-weight: normal;
+  box-shadow: none;
+}
+
+.menu .submenu li a:hover {
+  background: #b00;
+  color: #fff;
+}
+
+.menu li.dropdown:hover .submenu {
   display: block;
-  transition: background-color 0.2s ease;
 }
 
-/* Hover submenu */
-.submenu li a:hover {
-  background-color: #555;
-}
 
-/* Mostrar submenu ao passar mouse no dropdown */
-.dropdown:hover .submenu {
+.container {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Indicador da seta */
-.menu > li.dropdown > a::after {
-  content: " ▼";
-  font-size: 0.7em;
-  margin-left: 4px;
+
+.top-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-/* Responsividade simples */
-@media (max-width: 600px) {
-  .menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  .submenu {
-    position: static;
-    box-shadow: none;
-    border-radius: 0;
-    min-width: auto;
-  }
+
+.banner {
+  margin-bottom: 24px;
+}
+
+
+h2 {
+  color: #b00;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.box {
+  background: #fff;
+  box-shadow: 0 2px 8px #0002;
+  transition: transform 0.2s;
+}
+.box:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 4px 16px #0003;
+}
+
+
+.main-content {
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+}
+
+
+.fixed-button {
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  background-color: lightgray;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #0002;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.fixed-button:hover {
+  background: #e00;
+}
+
+
+.box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+
+.banner img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0003;
 }
