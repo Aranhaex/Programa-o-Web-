@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <link rel="stylesheet" href="aulascriptcss.css">
+</head>
+<body>
+    <div class="container">
+    <h1>JavaScript</h1>
+    <p>Personalizar a saudação com seu nome.</p>
+
+    <div class="nome" id="ola">Olá visitante!</div><br>
+    <input type="text" placeholder="Digite seu nome" id="inputNome"></input><br>
+    <button onclick="mudarNome()">Personalizar</button>
+    </div>
+
+    <script>
+        function mudarNome(){
+            let nome = document.getElementById("inputNome").value;
+            document.getElementById("ola").textContent = "Olá "+ nome + "!";
+        }
+    </script>
+
+</body>
+</html>

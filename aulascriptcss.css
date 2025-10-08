@@ -1,0 +1,27 @@
+body{
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+}
+.nome{
+    color:blue;
+    margin-top: 10px;
+}
+.container{
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    margin-top:10%;
+}
+button{
+    background-color: violet;
+    border-radius: 10%;
+    cursor: pointer;
+    margin-top: 2%;
+}
+button:hover{
+    background-color: blueviolet;
+    color: red;
+
+}
