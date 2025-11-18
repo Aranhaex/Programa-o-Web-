@@ -4,23 +4,34 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Login</title>
-	<link rel="Stylesheet" href="Style.css">
+	<title>Login do Sistema</title>
+	<link rel="stylesheet" href="Style.css">
 </head>
 <body>
-	<h1>Página de Login</h1>
-	<form action="LoginServlet" method="post">
-	Usuário: <input type="text" name="username" placeholder="Digite seu usuário" requered><br><br>
-	Senha: <input type="password" name="senha" placeholder="Digite sua senha" requered><br><br>
-	<button type="submit">Entrar</button>
-	</form>
-<%String msg = (String) request.getAttribute("mensagem");
-	if(msg != null){
-%>
 
-	<script>
-	alert.("<%= msg %>");
-	</script>
-	<%} %>
+	<div class="login-container">
+		<h1>Bem-vindo</h1>
+		
+		<form action="LoginServlet" method="post">
+			<label for="username">Usuário</label>
+			<input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+			
+			<label for="senha">Senha</label>
+			<input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+			
+			<button type="submit">Entrar</button>
+			<a href="Cadastro.jsp">Criar conta</a>
+		</form>
+	</div>
+
+	<% 
+		String msg = (String) request.getAttribute("mensagem");
+		if(msg != null){
+	%>
+		<script>
+			alert("<%= msg %>");
+		</script>
+	<% } %>
+
 </body>
 </html>

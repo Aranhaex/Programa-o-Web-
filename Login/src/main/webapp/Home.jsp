@@ -9,6 +9,6 @@
 </head>
 <body>
 	<h2>Bem vindo</h2>
-	<a href="Logout">Sair</a>
+	<a href="Logout" class="btn-logout">Sair</a>
 </body>
 </html>
